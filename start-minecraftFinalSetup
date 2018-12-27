@@ -104,5 +104,5 @@ else
   fi
 
   JVM_OPTS="-Xms${INIT_MEMORY} -Xmx${MAX_MEMORY} ${JVM_OPTS}"
-  exec mc-server-runner ${bootstrapArgs} java -classpath /extra-lib/*:$SERVER $JVM_XX_OPTS $JVM_OPTS net.minecraft.server.MinecraftServer "$@" $EXTRA_ARGS
+  exec mc-server-runner ${bootstrapArgs} java $JVM_XX_OPTS -classpath /extra-lib/*:$SERVER $JVM_OPTS net.minecraft.server.MinecraftServer "$@" $EXTRA_ARGS
 fi
